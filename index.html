@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-03</title>
+    
+    <!-- Tailwind CSS CDN Link -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+    <!-- DaisyUI CDN Link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Sora&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <style>
+        /* Custom fonts */
+        .poppins {
+            font-family: 'Poppins', sans-serif;
+        }
+        .sora {
+          font-family: 'Sora', serif;
+        }
+
+        /* Custom Gradient */
+        .custom-gradient {
+            background: linear-gradient(180deg, rgb(255, 255, 255), rgb(239, 235, 227));
+        }
+    </style>
+
+</head>
+<body>
+    <!-- Header Section Start -->
+    <header class="sora custom-gradient">
+      <!-- Navbar Section Start -->
+      <nav>
+        <div class="navbar w-11/12 max-w-screen-lg mx-auto">
+            <div class="navbar-start">
+              <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M4 6h16M4 12h8m-8 6h16" />
+                  </svg>
+                </div>
+                <ul
+                  tabindex="0"
+                  class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                  <li><a>Item 1</a></li>
+                  <li>
+                    <a>Parent</a>
+                    <ul class="p-2">
+                      <li><a>Submenu 1</a></li>
+                      <li><a>Submenu 2</a></li>
+                    </ul>
+                  </li>
+                  <li><a>Item 3</a></li>
+                </ul>
+              </div>
+              <a class="btn btn-ghost text-xl">daisyUI</a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+              <ul class="menu menu-horizontal px-1">
+                <li><a>Item 1</a></li>
+                <li>
+                  <details>
+                    <summary>Parent</summary>
+                    <ul class="p-2">
+                      <li><a>Submenu 1</a></li>
+                      <li><a>Submenu 2</a></li>
+                    </ul>
+                  </details>
+                </li>
+                <li><a>Item 3</a></li>
+              </ul>
+            </div>
+            <div class="navbar-end">
+              <a class="btn">Button</a>
+            </div>
+          </div>
+      </nav>
+      <!-- Navbar Section End -->
+
+      <!-- Hero Section Start -->
+      <div class="w-11/12 max-w-screen-lg mx-auto">
+        <div class="hero min-h-screen">
+            <div class="hero-content text-center">
+              <div class="max-w-md">
+                <h1 class="text-5xl font-bold">Freshness <span>You Can
+                  Count</span> You Can
+                  Count On, Prices You’ll Love!</h1>
+                <p class="py-6">
+                  Shop your daily essentials at unbe atable prices. From fresh produce to pantry staples, we’ve got you covered every day!
+                </p>
+                <div>
+                  <img src="./assets/images/hero-vegetables.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      <!-- Hero Section End -->
+    </header>
+    <!-- Header Section End -->
+
+    <main>
+      <!-- Services Section Start -->
+       <section>
+         <div class="w-11/12 max-w-screen-lg mx-auto">
+          <div class="flex">
+            <div class="card bg-base-100 w-96 shadow-xl">
+              <figure class="px-10 pt-10">
+                <img
+                  src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                  alt="Shoes"
+                  class="rounded-xl" />
+              </figure>
+              <div class="card-body items-center text-center">
+                <h2 class="card-title">24/7 Services</h2>
+                <p>We provide 24/7 services with fast response, expert support, and reliable solutions to meet your needs anytime, anywhere.</p>
+              </div>
+            </div>
+            <div class="card bg-base-100 w-96 shadow-xl">
+              <figure class="px-10 pt-10">
+                <img
+                  src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                  alt="Shoes"
+                  class="rounded-xl" />
+              </figure>
+              <div class="card-body items-center text-center">
+                <h2 class="card-title">Fast Delivery</h2>
+                <p>We ensure fast and reliable delivery, bringing your orders to your doorstep quickly and efficiently.</p>
+              </div>
+            </div>
+            <div class="card bg-base-100 w-96 shadow-xl">
+              <figure class="px-10 pt-10">
+                <img
+                  src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                  alt="Shoes"
+                  class="rounded-xl" />
+              </figure>
+              <div class="card-body items-center text-center">
+                <h2 class="card-title">Healthy Products</h2>
+                <p>Our healthy products are made with natural ingredients, ensuring quality, nutrition, and wellness for a better lifestyle.</p>
+              </div>
+            </div>
+          </div>
+         </div>
+       </section>
+      <!-- Services Section End -->
+
+      <!-- Products Section Start -->
+      <!-- Products Section End -->
+
+      <!-- Offers Section Start -->
+      <!-- Offers Section End -->
+
+      <!-- Offers Section Start -->
+      <!-- Offers Section End -->
+    </main>
+    <footer></footer>
+</body>
+</html>
