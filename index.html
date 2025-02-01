@@ -8,9 +8,6 @@
     <!-- Tailwind CSS CDN Link -->
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 
-    <!-- DaisyUI CDN Link -->
-    <!-- <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" /> -->
-    
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,118 +16,117 @@
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-
     <style>
         /* Custom fonts */
         .poppins {
             font-family: 'Poppins', sans-serif;
         }
         .sora {
-          font-family: 'Sora', serif;
+            font-family: 'Sora', serif;
         }
 
         /* Custom Gradient */
         .custom-gradient {
             background: linear-gradient(180deg, rgb(255, 255, 255), rgb(239, 235, 227));
         }
-    </style>
 
+        /* Bounce Animation */
+        @keyframes custom-bounce {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        .custom-bounce {
+            animation: custom-bounce 1s ease-in-out infinite;
+        }
+
+        /* Fade-Up Animation */
+        @keyframes fade-up {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-up {
+            animation: fade-up 1s ease-out forwards;
+        }
+
+        .animate-delay-200 {
+            animation-delay: 0.2s;
+        }
+
+        .animate-delay-400 {
+            animation-delay: 0.4s;
+        }
+    </style>
 </head>
 <body>
     <!-- Header Section Start -->
     <header class="sora custom-gradient">
-      <!-- Navbar Section Start -->
-      <nav class="lg:w-10/12 w-full mx-auto">
-        <div class="flex justify-between items-center py-3 lg:py-6  border-b-2 border-[#179800] lg:border-none px-6 lg:px-0">
-        <div>
-          <img class="hidden lg:block" src="./assets/images/logo-header.png" alt="Brand logo"/>
-          <img class="lg:hidden" src="./assets/images/logo-header-mobile.png" alt="logo-header-mobile"/>
-        </div>
-        <div class="hidden lg:block">
-          <ul class="flex gap-7 lg:ml-[180px] text-xl text-[#111111]">
-            <li><a href="#">Product</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact us</a></li>
-          </ul>
-        </div>
-        <div class="md:flex gap-6 hidden items-center">
-          <div class="lg:flex gap-6 hidden">
-            <i class="fa-solid fa-magnifying-glass cursor-pointer text-xl"></i>
-            <i class="fa-solid fa-cart-shopping cursor-pointer text-xl"></i>
-          </div>
-          <div class="flex gap-3 items-center">
-            <button class="py-3 px-8 border border-[#179800] bg-transparent rounded-lg text-[#111111] hover:bg-[#179800] text-base cursor-pointer">Login</button>
-            <button class="py-3 px-8 border border-[#179800] bg-[#179800] rounded-lg text-[#ffffff] hover:bg-[#256b18] text-base cursor-pointer">Register</button>
-          </div>
-        </div>
-        <div class="block md:hidden text-[#179800] text-2xl cursor-pointer">
-          <i class="fa-solid fa-bars"></i>
-        </div>
-      </div>
-        <!-- <div class="navbar w-11/12 max-w-screen-lg mx-auto">
-          <div class="navbar-start">
-              <div class="dropdown">
-              <img src="./assets/images/logo-header.png" alt="logo-header">
-            </div>
-            <div class="navbar-center hidden lg:flex">
-              <ul class="menu menu-horizontal px-1">
-                <li><a>Product</a></li>
-                <li><a>Services</a></li>
-                <li><a>Contact us</a></li>
-              </ul>
-            </div>
-            <div class="navbar-end flex ">
-              <div class="flex">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <i class="fa-light fa-cart-shopping"></i>
-              </div>
-              <div class="flex">
-                <button class="btn btn-outline btn-success">Login</button>
-                <button class="btn btn-success">Register</button>
-              </div>
-
-            </div>
-          </div>
-        </div> -->  
-      </nav>
-      <!-- Navbar Section End -->
-
-      <!-- Hero Section Start -->
-
-      <section class="w-11/12 max-w-screen-lg mx-auto">
-        <div class="md:pt-[50px] pt-[40px]">
-          <div class="px-7 md:px-0 max-w-[827px] text-center mx-auto">
-            <h1 class="font-semibold md:text-[56px] text-[32px] text-[#111111] md:mb-8 mb-4">Freshness
-              <span class="text-[#179800]">You Can <br class="hidden md:block"/>Count</span>
-              On, Prices You’ll Love!
-            </h1>
-            <p class="md:text-xl text-base font-light text-[#111111] md:mb-9">
-              Shop your daily essentials at unbeatable prices. From fresh produce
-              to pantry staples, we’ve got you covered every day!
-            </p>
-          </div>
-          <div class="md:max-w-[1030px] w-full mx-auto">
-            <img class="mx-auto w-full" src="./assets/images/hero-vegetables.png" alt="hero-vegetables"/>
-          </div>
-        </div>
-       
-        <!-- <div class="hero min-h-screen">
-            <div class="hero-content text-center">
-              <div class="max-w-md">
-                <h1 class="font-semibold md:text-[56px] text-[32px] text-[#111111] ">Freshness <span class="text-[#179800]">You Can
-                  Count</span> You Can
-                  Count On, Prices You’ll Love!</h1>
-                <p class="py-6">
-                  Shop your daily essentials at unbe atable prices. From fresh produce to pantry staples, we’ve got you covered every day!
-                </p>
+        <!-- Navbar Section Start -->
+        <nav class="lg:w-10/12 w-full mx-auto">
+            <div class="flex justify-between items-center py-3 lg:py-6 border-b-2 border-[#179800] lg:border-none px-6 lg:px-0">
                 <div>
-                  <img src="./assets/images/hero-vegetables.png" alt="">
+                    <img class="hidden lg:block" src="./assets/images/logo-header.png" alt="Brand logo"/>
+                    <img class="lg:hidden" src="./assets/images/logo-header-mobile.png" alt="logo-header-mobile"/>
                 </div>
-              </div>
+                <div class="hidden min-[1323px]:block">
+                    <ul class="flex gap-7 lg:ml-[180px] text-xl text-[#111111]">
+                        <li><a href="#">Product</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact us</a></li>
+                    </ul>
+                </div>
+                <div class="md:flex gap-6 hidden items-center">
+                    <div class="lg:flex gap-6 hidden">
+                        <i class="fa-solid fa-magnifying-glass cursor-pointer text-xl"></i>
+                        <i class="fa-solid fa-cart-shopping cursor-pointer text-xl"></i>
+                    </div>
+                    <div class="flex gap-3 items-center">
+                        <button class="py-3 px-8 border border-[#179800] bg-transparent rounded-lg text-[#111111] hover:bg-[#179800] hover:text-white text-base cursor-pointer">Login</button>
+                        <button class="py-3 px-8 border border-[#179800] bg-[#179800] rounded-lg text-[#ffffff] hover:bg-[#256b18] text-base cursor-pointer">Register</button>
+                    </div>
+                </div>
+                <div class="block md:hidden text-[#179800] text-2xl cursor-pointer">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
             </div>
-        </div> -->
-      </section>
-      <!-- Hero Section End -->
+        </nav>
+        <!-- Navbar Section End -->
+
+        <!-- Hero Section Start -->
+        <section class="w-11/12 max-w-screen-lg mx-auto">
+            <div class="md:pt-[50px] pt-[40px]">
+                <div class="px-7 md:px-0 max-w-[827px] text-center mx-auto">
+                    <h1 class="font-semibold md:text-[56px] text-[32px] text-[#111111] md:mb-8 mb-4 custom-bounce">Freshness
+                        <span class="text-[#179800]">You Can <br class="hidden md:block"/>Count</span>
+                        On, Prices You’ll Love!
+                    </h1>
+                    <p class="md:text-xl text-base font-light text-[#111111] md:mb-9 max-[768px]:mb-9 opacity-0 translate-y-8 animate-fade-up animate-delay-200">
+                        Shop your daily essentials at unbeatable prices. From fresh produce
+                        to pantry staples, we’ve got you covered every day!
+                    </p>
+                </div>
+                <div class="md:max-w-[1030px] w-full mx-auto">
+                    <img class="mx-auto w-full opacity-0  animate-fade-up animate-delay-400 overflow-hidden" src="./assets/images/hero-vegetables.png" alt="hero-vegetables"/>
+                </div>
+            </div>
+        </section>
+        <!-- Hero Section End -->
+    </header>
+    <!-- Header Section End -->
     </header>
     <!-- Header Section End -->
 
@@ -215,12 +211,12 @@
               Discover a world of treats, toys, and essentials handpicked for
             </p>
             <button class="py-[10px] px-[30px] bg-white rounded-lg">Buy Now</button>
-            <img class="absolute bottom-0 right-[2px]" src="./assets/images/vegetable-offer.png" alt="Vegetable Image"/>
+            <img class="absolute bottom-0 max-[768px]:w-48 right-[2px]" src="./assets/images/vegetable-offer.png" alt="Vegetable Image"/>
           </div>
             <!-- Offer Section End -->
 
             <!-- Products Cards Start -->
-            <div class="grid lg:grid-cols-3 grid-cols-2 lg:col-span-2 col-span-1 lg:gap-6 gap-[14px]">
+            <div class="grid lg:grid-cols-3 max-[1213px]:grid-cols-2 grid-cols-2 lg:col-span-2 col-span-1 lg:gap-6 gap-[14px]">
               <div class="flex lg:py-4 lg:pl-4 py-[10px] pl-[10px] bg-white lg:gap-4 gap-[10px] rounded-[10px]">
                 <div class="bg-[#EFEBE3] rounded-[10px]">
                   <img class="m-auto px-2 py-2" src="./assets/images/onion.png" alt="onion"/>
@@ -376,20 +372,16 @@
 
     <!-- Organic Products Section Start -->
     <section class="sora custom-gradient mb-36" >
-      <div class="lg:mt-[140px] mt-12 lg:py-[140px] px-4 lg:px-0 py-12">
+      <div class="lg:mb-[140px] mt-12 lg:pb-[140px] px-4 lg:px-0 py-12">
 
         <div class="px-1 md:px-0 lg:w-10/12 w-full text-center mx-auto">
           <h2 class="font-semibold md:text-[30px] text-[20px] text-[#111111] md:mb-8 mb-4">Fresh Organic
             <span class="text-[#179800]">Products for a <br class="hidden md:block"/>Healthy</span>Sustainable Lifestyle.
           </h2>
-          <p class="md:text-xl text-base text-justify font-light text-[#111111] md:mb-9 ">
-            In today’s fast-paced and technology-driven world, people are becoming more aware of their health and the environment. Fresh organic products provide an excellent solution for maintaining a healthy lifestyle while promoting sustainability. These products are free from harmful chemicals, synthetic pesticides, artificial additives, and preservatives, making them a safer and healthier choice for individuals and families.
-            <br class="mt-3">
-            Organic products such as fresh fruits, vegetables, dairy, grains, and legumes retain their natural nutrients, providing essential vitamins, minerals, and antioxidants for a balanced diet. Since organic farming avoids harmful synthetic fertilizers, chemicals, and pesticides, it helps maintain healthy soil fertility, promotes biodiversity, and ensures better water retention. As a result, these sustainable farming practices reduce environmental pollution, safeguard natural ecosystems, and encourage responsible agricultural methods that benefit both the planet and the consumers. Organic farming also supports healthier food choices and promotes the well-being of future generations.
-            <br class="">
-            Apart from food items, organic products also include herbal oils, honey, tea, skincare products, organic fabrics, and natural cleaning agents, all made from sustainable, natural ingredients. Choosing organic products means supporting local farmers, artisans, and businesses that prioritize eco-friendly, ethical, and sustainable practices. Additionally, organic farming requires less water and energy, helping conserve resources and reduce environmental degradation, while significantly reducing the overall carbon footprint. By opting for organic, individuals contribute to a healthier planet, reduced waste, and long-term ecological balance. This conscious choice fosters a more sustainable future for all.
-            <br class="">
-            Consumers are increasingly choosing organic products because of their numerous benefits. These items not only enhance health but also contribute to a cleaner environment. By making the switch to organic, individuals can ensure a healthier future for themselves and the planet.
+          <p class="md:text-xl text-base text-justify font-light text-[#111111] mb-9 ">
+            In today’s world, people are becoming more aware of their health and the environment. Fresh organic products offer an excellent solution for maintaining a healthy lifestyle while also protecting nature. These products are grown without synthetic pesticides, harmful chemicals, or genetically modified organisms (GMOs), making them a safer and healthier choice.
+
+            Organic fruits, vegetables, dairy, and whole grains retain their natural nutrients. They provide essential vitamins, minerals, and antioxidants that help improve overall health. Since organic farming avoids synthetic fertilizers and harmful pesticides, it maintains soil fertility and promotes biodiversity. As a result, these eco-friendly farming methods reduce pollution and help sustain natural ecosystems.
           </p>
         </div>
 
@@ -473,11 +465,9 @@
             <img class="mx-auto w-[232px] lg:w-[442px] mb-6 lg:mb-0" src="./assets/images/vegetable-busket.png" alt="vegetable-busket"/>
           </div>
           <div>
-            <h2 class="sora font-semibold lg:text-4xl text-[22px] lg:mb-[22px] mb-3 text-[#179800] lg:text-[#111111]">Get Grocery News!</h2>
-            <p class="sora lg:text-xl text-base text-[#111111] lg:mb-9 mb-5">Exclusive training tips, ticks, product deals and more.</p>
-            <input
-              class="lg:py-[18px] py-[8px] pl-2 lg:pl-[18px] bg-white sora lg:text-base text-sm text-[#C4C4C4] lg:mb-9 mb-3 block focus:outline-none rounded-lg lg:w-4/6 w-[312px] lg:mx-0 mx-auto"
-              type="text" placeholder="Enter email...."/>
+            <h2 class="font-semibold lg:text-4xl text-[22px] lg:mb-[22px] mb-3 text-[#179800] lg:text-[#111111]">Get Grocery News!</h2>
+            <p class="lg:text-xl text-base text-[#111111] lg:mb-9 mb-5">Exclusive training tips, ticks, product deals and more.</p>
+            <input class="lg:py-[18px] py-[8px] max-[400px]:w-64 pl-2 lg:pl-[18px] bg-white lg:text-base text-sm text-[#C4C4C4] lg:mb-9 mb-3 block focus:outline-none rounded-lg lg:w-4/6 w-[312px] lg:mx-0 mx-auto" type="text" placeholder="Enter email...."/>
             <button class="lg:py-[10px] py-2 lg:px-[30px] px-[24px] bg-[#179800] text-white sora lg:text-xl text-sm rounded-lg cursor-pointer">Subscribe</button>
           </div>
         </div>
@@ -487,17 +477,17 @@
     <!-- Main Section End -->
 
    <!-- Footer Section Start -->
-   <footer >
-     <section class="bg-[#179800] lg:pb-[140px] pb-12 lg:pt-[370px] pt-[281px]">
-       <div class="grid lg:grid-cols-3 gap-[35px] lg:gap-0 grid-cols-1 lg:w-10/12 w-full px-4 lg:px-0 mx-auto items-end">
+   <footer class="sora">
+     <section class="bg-[#179800] lg:pb-[140px] pb-12 lg:pt-[370px] pt-[280px]">
+       <div class="grid lg:grid-cols-3 gap-9 lg:gap-0 grid-cols-1 lg:w-10/12 w-full px-4 lg:px-0 mx-auto items-end">
          <div>
            <img class="mb-[11px]" src="./assets/images/logo-footer.png" alt="" />
-           <p class="sora lg:text-xl text-base text-white">Discover a world of treats, toys, and essentials handpicked for your
+           <p class="lg:text-xl text-base text-white">Discover a world of treats, toys, and essentials handpicked for your
              furry friends</p>
          </div>
          <div>
            <div class="lg:ml-[158px] ml-0">
-             <ul class="sora text-[#EFEBE3] lg:text-xl text-base flex flex-col lg:gap-8 gap-5">
+             <ul class="text-[#EFEBE3] lg:text-xl text-base flex flex-col lg:gap-8 gap-5">
                <li><a href="#">Product</a></li>
                <li><a href="#">Services</a></li>
                <li><a href="#">Contact us</a></li>
@@ -505,7 +495,7 @@
            </div>
          </div>
          <div class="flex flex-col lg:ml-auto ml-0">
-           <h4 class="sora font-medium lg:text-base text-sm text-[#EFEBE3] mb-4">Follow Us</h4>
+           <h4 class="font-medium lg:text-base text-sm text-[#EFEBE3] mb-4">Follow Us</h4>
            <ul class="flex text-2xl gap-7 text-[#EFEBE3]">
              <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
              <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
