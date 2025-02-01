@@ -9,7 +9,7 @@
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 
     <!-- DaisyUI CDN Link -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <!-- <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" /> -->
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -40,68 +40,84 @@
     <!-- Header Section Start -->
     <header class="sora custom-gradient">
       <!-- Navbar Section Start -->
-      <nav>
-        <div class="navbar w-11/12 max-w-screen-lg mx-auto">
-            <div class="navbar-start">
+      <nav class="lg:w-10/12 w-full mx-auto">
+        <div class="flex justify-between items-center py-3 lg:py-6  border-b-2 border-[#179800] lg:border-none px-6 lg:px-0">
+        <div>
+          <img class="hidden lg:block" src="./assets/images/logo-header.png" alt="Brand logo"/>
+          <img class="lg:hidden" src="./assets/images/logo-header-mobile.png" alt="logo-header-mobile"/>
+        </div>
+        <div class="hidden lg:block">
+          <ul class="flex gap-7 lg:ml-[180px] text-xl text-[#111111]">
+            <li><a href="#">Product</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact us</a></li>
+          </ul>
+        </div>
+        <div class="md:flex gap-6 hidden items-center">
+          <div class="lg:flex gap-6 hidden">
+            <i class="fa-solid fa-magnifying-glass cursor-pointer text-xl"></i>
+            <i class="fa-solid fa-cart-shopping cursor-pointer text-xl"></i>
+          </div>
+          <div class="flex gap-3 items-center">
+            <button class="py-3 px-8 border border-[#179800] bg-transparent rounded-lg text-[#111111] hover:bg-[#179800] text-base cursor-pointer">Login</button>
+            <button class="py-3 px-8 border border-[#179800] bg-[#179800] rounded-lg text-[#ffffff] hover:bg-[#256b18] text-base cursor-pointer">Register</button>
+          </div>
+        </div>
+        <div class="block md:hidden text-[#179800] text-2xl cursor-pointer">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+        <!-- <div class="navbar w-11/12 max-w-screen-lg mx-auto">
+          <div class="navbar-start">
               <div class="dropdown">
-                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-5 w-5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M4 6h16M4 12h8m-8 6h16" />
-                  </svg>
-                </div>
-                <ul
-                  tabindex="0"
-                  class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                  <li><a>Item 1</a></li>
-                  <li>
-                    <a>Parent</a>
-                    <ul class="p-2">
-                      <li><a>Submenu 1</a></li>
-                      <li><a>Submenu 2</a></li>
-                    </ul>
-                  </li>
-                  <li><a>Item 3</a></li>
-                </ul>
-              </div>
-              <a class="btn btn-ghost text-xl">daisyUI</a>
+              <img src="./assets/images/logo-header.png" alt="logo-header">
             </div>
             <div class="navbar-center hidden lg:flex">
               <ul class="menu menu-horizontal px-1">
-                <li><a>Item 1</a></li>
-                <li>
-                  <details>
-                    <summary>Parent</summary>
-                    <ul class="p-2">
-                      <li><a>Submenu 1</a></li>
-                      <li><a>Submenu 2</a></li>
-                    </ul>
-                  </details>
-                </li>
-                <li><a>Item 3</a></li>
+                <li><a>Product</a></li>
+                <li><a>Services</a></li>
+                <li><a>Contact us</a></li>
               </ul>
             </div>
-            <div class="navbar-end">
-              <a class="btn">Button</a>
+            <div class="navbar-end flex ">
+              <div class="flex">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-light fa-cart-shopping"></i>
+              </div>
+              <div class="flex">
+                <button class="btn btn-outline btn-success">Login</button>
+                <button class="btn btn-success">Register</button>
+              </div>
+
             </div>
           </div>
+        </div> -->  
       </nav>
       <!-- Navbar Section End -->
 
       <!-- Hero Section Start -->
-      <div class="w-11/12 max-w-screen-lg mx-auto">
-        <div class="hero min-h-screen">
+
+      <section class="w-11/12 max-w-screen-lg mx-auto">
+        <div class="md:pt-[50px] pt-[40px]">
+          <div class="px-7 md:px-0 max-w-[827px] text-center mx-auto">
+            <h1 class="font-semibold md:text-[56px] text-[32px] text-[#111111] md:mb-8 mb-4">Freshness
+              <span class="text-[#179800]">You Can <br class="hidden md:block"/>Count</span>
+              On, Prices You’ll Love!
+            </h1>
+            <p class="md:text-xl text-base font-light text-[#111111] md:mb-9">
+              Shop your daily essentials at unbeatable prices. From fresh produce
+              to pantry staples, we’ve got you covered every day!
+            </p>
+          </div>
+          <div class="md:max-w-[1030px] w-full mx-auto">
+            <img class="mx-auto w-full" src="./assets/images/hero-vegetables.png" alt="hero-vegetables"/>
+          </div>
+        </div>
+       
+        <!-- <div class="hero min-h-screen">
             <div class="hero-content text-center">
               <div class="max-w-md">
-                <h1 class="text-5xl font-bold">Freshness <span>You Can
+                <h1 class="font-semibold md:text-[56px] text-[32px] text-[#111111] ">Freshness <span class="text-[#179800]">You Can
                   Count</span> You Can
                   Count On, Prices You’ll Love!</h1>
                 <p class="py-6">
@@ -112,25 +128,25 @@
                 </div>
               </div>
             </div>
-          </div>
-      </div>
+        </div> -->
+      </section>
       <!-- Hero Section End -->
     </header>
     <!-- Header Section End -->
 
+
+    <!-- Main Section Start -->
     <main>
       <!-- Services Section Start -->
        <section class="sora " >
-         <div class="w-11/12 max-w-screen-lg px-4 lg:px-0 mx-auto lg:my-[140px] my-16">
+         <div class="lg:w-10/12 w-full mx-auto px-4 lg:px-0 lg:my-[140px] my-16">
           <div>
-            <h2 class="font-semibold lg:text-4xl text-2xl text-[#179800] lg:mb-12 mb-8">
-              Services
-            </h2>
+            <h2 class="font-semibold lg:text-4xl text-2xl text-[#179800] lg:mb-12 mb-8">Services</h2>
           </div>
           <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:gap-6 gap-4">
             <div class="lg:pt-8 lg:px-8 lg:pb-11 pt-[26px] px-[26px] pb-[37px] text-center bg-[#EFEBE3] rounded-2xl">
               <div class="p-8 bg-white lg:w-[150px] lg:h-[150px] w-[126px] h-[126px] mx-auto rounded-full lg:mb-12 mb-9">
-                <img src="./assets/images/service.png" alt="Shoes"
+                <img src="./assets/images/service.png" alt="service"
                 class=""/>
               </div>
               <div class="items-center text-center">
@@ -140,7 +156,7 @@
             </div>
             <div class="lg:pt-8 lg:px-8 lg:pb-11 pt-[26px] px-[26px] pb-[37px] text-center bg-[#EFEBE3] rounded-2xl">
               <div class="p-8 bg-white lg:w-[150px] lg:h-[150px] w-[126px] h-[126px] mx-auto rounded-full lg:mb-12 mb-9">
-                <img src="./assets/images/delivery.png" alt="Shoes"
+                <img src="./assets/images/delivery.png" alt="delivery"
                 class=""/>
               </div>
               <div class="items-center text-center">
@@ -150,7 +166,7 @@
             </div>
             <div class="lg:pt-8 lg:px-8 lg:pb-11 pt-[26px] px-[26px] pb-[37px] text-center bg-[#EFEBE3] rounded-2xl">
               <div class="p-8 bg-white lg:w-[150px] lg:h-[150px] w-[126px] h-[126px] mx-auto rounded-full lg:mb-12 mb-9">
-                <img src="./assets/images/healthy.png" alt="Shoes"
+                <img src="./assets/images/healthy.png" alt="healthy"
                 class=""/>
               </div>
               <div class="items-center text-center">
@@ -187,29 +203,27 @@
        </section>
       <!-- Services Section End -->
 
-      <!-- Products Section Start -->
-      <section class="bg-[#EFEBE3] lg:py-[140px] py-16">
-        <div class="w-11/12 max-w-screen-lg mx-auto px-4 lg:px-0">
+      <!-- Popular Products Section Start -->
+      <section class="sora bg-[#EFEBE3] lg:py-[140px] py-16">
+        <div class="lg:w-10/12 w-full mx-auto px-4 lg:px-0">
           <h2 class="font-semibold lg:text-4xl text-2xl text-[#179800] lg:mb-12 mb-8">Popular Produts</h2>
           <div class="grid lg:grid-cols-3 grid-cols-1 gap-6">
             <!-- Offer Section Start -->
             <div class="relative bg-gradient-to-br from-[#53db3a] to-white rounded-[10px] pb-44 pt-12 pl-8">
-              <h4>30% off</h4>
-              <p>Discover a world of treats, toys, and essentials handpicked for</p>
-              <button>Buy Now</button>
-              <img
-                class="absolute bottom-0 right-[2px]"
-                src="./assets/images/vegetable-offer.png"
-                alt="Vegetable Image"
-              />
-            </div>
+            <h4 class="poppins font-semibold text-3xl text-white mb-5">30% off</h4>
+            <p class="sora max-w-[334px] text-base text-[rgba(17,17,17,0.7)] mb-5">
+              Discover a world of treats, toys, and essentials handpicked for
+            </p>
+            <button class="py-[10px] px-[30px] bg-white rounded-lg">Buy Now</button>
+            <img class="absolute bottom-0 right-[2px]" src="./assets/images/vegetable-offer.png" alt="Vegetable Image"/>
+          </div>
             <!-- Offer Section End -->
 
             <!-- Products Cards Start -->
-            <div class="sora grid lg:grid-cols-3 grid-cols-2 lg:col-span-2 col-span-1 lg:gap-6 gap-[14px]">
+            <div class="grid lg:grid-cols-3 grid-cols-2 lg:col-span-2 col-span-1 lg:gap-6 gap-[14px]">
               <div class="flex lg:py-4 lg:pl-4 py-[10px] pl-[10px] bg-white lg:gap-4 gap-[10px] rounded-[10px]">
                 <div class="bg-[#EFEBE3] rounded-[10px]">
-                  <img class="m-auto" src="./assets/images/onion.png" alt=""/>
+                  <img class="m-auto px-2 py-2" src="./assets/images/onion.png" alt="onion"/>
                 </div>
                 <div>
                   <div class="flex items-center gap-[11px]">
@@ -222,7 +236,7 @@
               </div>
               <div class="flex lg:py-4 lg:pl-4 py-[10px] pl-[10px] bg-white lg:gap-4 gap-[10px] rounded-[10px]">
                 <div class="bg-[#EFEBE3] rounded-[10px]">
-                  <img class="m-auto" src="./assets/images/tomato.png" alt="" />
+                  <img class="m-auto px-2 py-2" src="./assets/images/tomato.png" alt="tomato" />
                 </div>
                 <div>
                   <div class="flex items-center gap-[11px]">
@@ -235,7 +249,7 @@
               </div>
               <div class="flex lg:py-4 lg:pl-4 py-[10px] pl-[10px] bg-white lg:gap-4 gap-[10px] rounded-[10px]">
                 <div class="bg-[#EFEBE3] rounded-[10px]">
-                  <img class="m-auto" src="./assets/images/potato.png" alt="" />
+                  <img class="m-auto px-2 py-2" src="./assets/images/potato.png" alt="" />
                 </div>
                 <div>
                   <div class="flex items-center gap-[11px]">
@@ -248,7 +262,7 @@
               </div>
               <div class="flex lg:py-4 lg:pl-4 py-[10px] pl-[10px] bg-white lg:gap-4 gap-[10px] rounded-[10px]">
                 <div class="bg-[#EFEBE3] rounded-[10px]">
-                  <img class="m-auto" src="./assets/images/tomato.png" alt="" />
+                  <img class="m-auto px-2 py-2" src="./assets/images/tomato.png" alt="" />
                 </div>
                 <div>
                   <div class="flex items-center gap-[11px]">
@@ -261,7 +275,7 @@
               </div>
               <div class="flex lg:py-4 lg:pl-4 py-[10px] pl-[10px] bg-white lg:gap-4 gap-[10px] rounded-[10px]">
                 <div class="bg-[#EFEBE3] rounded-[10px]">
-                  <img class="m-auto" src="./assets/images/onion.png" alt="" />
+                  <img class="m-auto px-2 py-2" src="./assets/images/onion.png" alt="" />
                 </div>
                 <div>
                   <div class="flex items-center gap-[11px]">
@@ -274,7 +288,7 @@
               </div>
               <div class="flex lg:py-4 lg:pl-4 py-[10px] pl-[10px] bg-white lg:gap-4 gap-[10px] rounded-[10px]">
                 <div class="bg-[#EFEBE3] rounded-[10px]">
-                  <img class="m-auto" src="./assets/images/tomato.png" alt="" />
+                  <img class="m-auto px-2 py-2" src="./assets/images/tomato.png" alt="" />
                 </div>
                 <div>
                   <div class="flex items-center gap-[11px]">
@@ -287,7 +301,7 @@
               </div>
               <div class="flex lg:py-4 lg:pl-4 py-[10px] pl-[10px] bg-white lg:gap-4 gap-[10px] rounded-[10px]">
                 <div class="bg-[#EFEBE3] rounded-[10px]">
-                  <img class="m-auto" src="./assets/images/onion.png" alt="" />
+                  <img class="m-auto px-2 py-2" src="./assets/images/onion.png" alt="" />
                 </div>
                 <div>
                   <div class="flex items-center gap-[11px]">
@@ -300,7 +314,7 @@
               </div>
               <div class="flex lg:py-4 lg:pl-4 py-[10px] pl-[10px] bg-white lg:gap-4 gap-[10px] rounded-[10px]">
                 <div class="bg-[#EFEBE3] rounded-[10px]">
-                  <img class="m-auto" src="./assets/images/potato.png" alt="" />
+                  <img class="m-auto px-2 py-2" src="./assets/images/potato.png" alt="" />
                 </div>
                 <div>
                   <div class="flex items-center gap-[11px]">
@@ -313,7 +327,7 @@
               </div>
               <div class="hidden lg:flex lg:py-4 lg:pl-4 py-[10px] pl-[10px] bg-white lg:gap-4 gap-[10px] rounded-[10px]">
                 <div class="bg-[#EFEBE3] rounded-[10px]">
-                  <img class="m-auto" src="./assets/images/potato.png" alt="" />
+                  <img class="m-auto px-2 py-2" src="./assets/images/potato.png" alt="" />
                 </div>
                 <div>
                   <div class="flex items-center gap-[11px]">
@@ -329,20 +343,179 @@
           </div>
         </div>
       </section>
-      <!-- Products Section End -->
+      <!-- Popular Products Section End -->
 
-      <!-- Offers Section Start -->
-       <section></section>
-      <!-- Offers Section End -->
+      <!-- Arrival & Offers Section Start -->
+      <section class="poppins overflow-x-hidden lg:w-10/12 w-full mx-auto lg:mt-[140px] lg:mb-[160px] my-12 px-4 lg:px-0">
+      <h2 class="font-semibold lg:text-4xl text-2xl text-[#179800] lg:mb-12 mb-8">Arrival & Offers</h2>
+      <div class="grid lg:grid-cols-12 grid-cols-1 lg:gap-5 gap-4">
+        <div class="lg:col-span-7 col-span-12 bg-[#115414] flex justify-between lg:pt-12 pt-[26px] pl-[18px] pb-[25px] lg:pb-0 lg:pl-8 rounded-3xl">
+          <div>
+            <img class="mb-7 max-w-[113px] lg:max-w-full" src="./assets/images/dawat-logo.png" alt=""/>
+            <button class="cursor-pointer mb-7 lg:py-[15px] lg:px-[40px] py-2 px-4 bg-[#63B76D] lg:text-xl text-xs text-white rounded-xl">Cook Exotic Dishes</button>
+            <p class="poppins text-white lg:text-[40px] text-[20px]">UP to <span class="font-bold">20% OFF</span></p>
+          </div>
+          <div>
+            <img class="max-w-[180px] lg:max-w-full" src="./assets/images/dawat-mock-up.png" alt=""/>
+          </div>
+        </div>
+        <div class="rounded-3xl items-center justify-between pr-3 lg:col-span-5 col-span-12 bg-[#102861] flex lg:pt-[19px] pt-3 lg:pl-[27px] pl-4 pb-6 lg:pb-0">
+          <div>
+            <img class="max-w-16 lg:max-w-full" src="./assets/images/india-gate-logo.png" alt=""/>
+            <button class="cursor-pointer mb-7 lg:py-[15px] lg:px-[30px] py-2 px-4 bg-[#2A4D97] mt-4 lg:text-xl text-xs text-white rounded-xl">World’s No.1 Rice</button>
+            <p class="poppins text-white lg:text-[40px] text-[22px]">UP to <span class="font-bold">40% OFF</span></p>
+          </div>
+          <div>
+            <img class="max-w-[120px] lg:max-w-full" src="./assets/images/india-gate-mock-up.png" alt=""/>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Arrival & Offers Section End -->
 
-      <!-- Offers Section Start -->
-       <section></section>
-      <!-- Offers Section End -->
 
-      <!-- Grocery News Section Start -->
-       <section></section>
-      <!-- Grocery News Section End -->
+    <!-- Organic Products Section Start -->
+    <section class="sora custom-gradient mb-36" >
+      <div class="lg:mt-[140px] mt-12 lg:py-[140px] px-4 lg:px-0 py-12">
+
+        <div class="px-1 md:px-0 lg:w-10/12 w-full text-center mx-auto">
+          <h2 class="font-semibold md:text-[30px] text-[20px] text-[#111111] md:mb-8 mb-4">Fresh Organic
+            <span class="text-[#179800]">Products for a <br class="hidden md:block"/>Healthy</span>Sustainable Lifestyle.
+          </h2>
+          <p class="md:text-xl text-base text-justify font-light text-[#111111] md:mb-9 ">
+            In today’s fast-paced and technology-driven world, people are becoming more aware of their health and the environment. Fresh organic products provide an excellent solution for maintaining a healthy lifestyle while promoting sustainability. These products are free from harmful chemicals, synthetic pesticides, artificial additives, and preservatives, making them a safer and healthier choice for individuals and families.
+            <br class="mt-3">
+            Organic products such as fresh fruits, vegetables, dairy, grains, and legumes retain their natural nutrients, providing essential vitamins, minerals, and antioxidants for a balanced diet. Since organic farming avoids harmful synthetic fertilizers, chemicals, and pesticides, it helps maintain healthy soil fertility, promotes biodiversity, and ensures better water retention. As a result, these sustainable farming practices reduce environmental pollution, safeguard natural ecosystems, and encourage responsible agricultural methods that benefit both the planet and the consumers. Organic farming also supports healthier food choices and promotes the well-being of future generations.
+            <br class="">
+            Apart from food items, organic products also include herbal oils, honey, tea, skincare products, organic fabrics, and natural cleaning agents, all made from sustainable, natural ingredients. Choosing organic products means supporting local farmers, artisans, and businesses that prioritize eco-friendly, ethical, and sustainable practices. Additionally, organic farming requires less water and energy, helping conserve resources and reduce environmental degradation, while significantly reducing the overall carbon footprint. By opting for organic, individuals contribute to a healthier planet, reduced waste, and long-term ecological balance. This conscious choice fosters a more sustainable future for all.
+            <br class="">
+            Consumers are increasingly choosing organic products because of their numerous benefits. These items not only enhance health but also contribute to a cleaner environment. By making the switch to organic, individuals can ensure a healthier future for themselves and the planet.
+          </p>
+        </div>
+
+      <div class="lg:w-10/12 w-full mx-auto">
+        <h2 class="font-semibold lg:text-4xl text-2xl text-[#179800] lg:mb-12 mb-8">Organic Products</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 mt-8">
+          <!-- Product 1 -->
+          <div class="bg-white shadow-lg rounded-lg p-6">
+            <img src="./assets/images/Dates.jpg" alt="Dates" class="w-full h-40 object-cover rounded-md mb-4"/>
+            <h3 class="text-2xl font-semibold text-[#333]">Fresh Dates</h3>
+            <p class="font-semibold text-[#179800] text-xl mt-2 mb-3">$ 19.99</p>
+            <button class="py-[10px] px-[30px] bg-[#179800] text-white font-semibold text-xl rounded-lg cursor-pointer">Buy Now</button>
+          </div>
+
+          <!-- Product 2 -->
+          <div class="bg-white shadow-lg rounded-lg p-6">
+            <img src="./assets/images/Almonds.jpg" alt="Almonds" class="w-full h-40 object-cover rounded-md mb-4"/>
+            <h3 class="text-2xl font-semibold text-[#333]">Fresh Almonds</h3>
+            <p class="font-semibold text-[#179800] text-xl mt-2 mb-3">$ 12.99</p>
+            <button class="py-[10px] px-[30px] bg-[#179800] text-white font-semibold text-xl rounded-lg cursor-pointer">Buy Now</button>
+          </div>
+
+          <!-- Product 3 -->
+          <div class="bg-white shadow-lg rounded-lg p-6">
+            <img src="./assets/images/Yogurt.jpg" alt="Yogurt" class="w-full h-40 object-cover rounded-md mb-4"/>
+            <h3 class="text-2xl font-semibold text-[#333]">Fresh Yogurt</h3>
+            <p class="font-semibold text-[#179800] text-xl mt-2 mb-3">$ 17.49</p>
+            <button class="py-[10px] px-[30px] bg-[#179800] text-white font-semibold text-xl rounded-lg cursor-pointer">Buy Now</button>
+          </div>
+
+          <!-- Product 4 -->
+          <div class="bg-white shadow-lg rounded-lg p-6">
+            <img src="./assets/images/Clarified Butter.webp" alt="Clarified Butter" class="w-full h-40 object-cover rounded-md mb-4"/>
+            <h3 class="text-2xl font-semibold text-[#333]">Clarified Butter</h3>
+            <p class="font-semibold text-[#179800] text-xl mt-2 mb-3">$ 11.49</p>
+            <button class="py-[10px] px-[30px] bg-[#179800] text-white font-semibold text-xl rounded-lg cursor-pointer">Buy Now</button>
+          </div>
+
+          <!-- Product 5 -->
+          <div class="bg-white shadow-lg rounded-lg p-6">
+            <img src="./assets/images/Mustard Oil.webp" alt="Mustard Oil" class="w-full h-40 object-cover rounded-md mb-4"/>
+            <h3 class="text-2xl font-semibold text-[#333]">Mustard Oil</h3>
+            <p class="font-semibold text-[#179800] text-xl mt-2 mb-3">$ 09.99</p>
+            <button class="py-[10px] px-[30px] bg-[#179800] text-white font-semibold text-xl rounded-lg cursor-pointer">Buy Now</button>
+          </div>
+
+          <!-- Product 6 -->
+          <div class="bg-white shadow-lg rounded-lg p-6">
+            <img src="./assets/images/Walnuts.jpg" alt="Walnuts" class="w-full h-40 object-cover rounded-md mb-4"/>
+            <h3 class="text-2xl font-semibold text-[#333]">Fresh Walnuts</h3>
+            <p class="font-semibold text-[#179800] text-xl mt-2 mb-3">$ 13.89</p>
+            <button class="py-[10px] px-[30px] bg-[#179800] text-white font-semibold text-xl rounded-lg cursor-pointer">Buy Now</button>
+          </div>
+
+          <!-- Product 7 -->
+          <div class="bg-white shadow-lg rounded-lg p-6">
+            <img src="./assets/images/Cashew Nuts.jpg" alt="Cashew Nuts" class="w-full h-40 object-cover rounded-md mb-4"/>
+            <h3 class="text-2xl font-semibold text-[#333]">Cashew Nuts</h3>
+            <p class="font-semibold text-[#179800] text-xl mt-2 mb-3">$ 19.29</p>
+            <button class="py-[10px] px-[30px] bg-[#179800] text-white font-semibold text-xl rounded-lg cursor-pointer">Buy Now</button>
+          </div>
+
+          <!-- Product 8 -->
+          <div class="bg-white shadow-lg rounded-lg p-6">
+            <img src="./assets/images/Peanuts.jpg" alt="Peanuts" class="w-full h-40 object-cover rounded-md mb-4"/>
+            <h3 class="text-2xl font-semibold text-[#333]">Fresh Peanuts</h3>
+            <p class="font-semibold text-[#179800] text-xl mt-2 mb-3">$16.59</p>
+            <button class="py-[10px] px-[30px] bg-[#179800] text-white font-semibold text-xl rounded-lg cursor-pointer">Buy Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+
+    <!-- Products Section Start -->
+
+    <!-- News Section Start -->
+      <section class="sora px-4">
+        <div class="lg:-mb-[227px] -mb-[234px] relative z-10 lg:w-10/12 items-center w-full mx-auto grid lg:grid-cols-2 grid-cols-1 bg-[#EFEBE3] rounded-3xl lg:py-14 pt-8 pb-10 px-3 text-center lg:text-start">
+          <div>
+            <img class="mx-auto w-[232px] lg:w-[442px] mb-6 lg:mb-0" src="./assets/images/vegetable-busket.png" alt="vegetable-busket"/>
+          </div>
+          <div>
+            <h2 class="sora font-semibold lg:text-4xl text-[22px] lg:mb-[22px] mb-3 text-[#179800] lg:text-[#111111]">Get Grocery News!</h2>
+            <p class="sora lg:text-xl text-base text-[#111111] lg:mb-9 mb-5">Exclusive training tips, ticks, product deals and more.</p>
+            <input
+              class="lg:py-[18px] py-[8px] pl-2 lg:pl-[18px] bg-white sora lg:text-base text-sm text-[#C4C4C4] lg:mb-9 mb-3 block focus:outline-none rounded-lg lg:w-4/6 w-[312px] lg:mx-0 mx-auto"
+              type="text" placeholder="Enter email...."/>
+            <button class="lg:py-[10px] py-2 lg:px-[30px] px-[24px] bg-[#179800] text-white sora lg:text-xl text-sm rounded-lg cursor-pointer">Subscribe</button>
+          </div>
+        </div>
+      </section>
+    <!-- News Section End -->
     </main>
-    <footer></footer>
+    <!-- Main Section End -->
+
+   <!-- Footer Section Start -->
+   <footer >
+     <section class="bg-[#179800] lg:pb-[140px] pb-12 lg:pt-[370px] pt-[281px]">
+       <div class="grid lg:grid-cols-3 gap-[35px] lg:gap-0 grid-cols-1 lg:w-10/12 w-full px-4 lg:px-0 mx-auto items-end">
+         <div>
+           <img class="mb-[11px]" src="./assets/images/logo-footer.png" alt="" />
+           <p class="sora lg:text-xl text-base text-white">Discover a world of treats, toys, and essentials handpicked for your
+             furry friends</p>
+         </div>
+         <div>
+           <div class="lg:ml-[158px] ml-0">
+             <ul class="sora text-[#EFEBE3] lg:text-xl text-base flex flex-col lg:gap-8 gap-5">
+               <li><a href="#">Product</a></li>
+               <li><a href="#">Services</a></li>
+               <li><a href="#">Contact us</a></li>
+             </ul>
+           </div>
+         </div>
+         <div class="flex flex-col lg:ml-auto ml-0">
+           <h4 class="sora font-medium lg:text-base text-sm text-[#EFEBE3] mb-4">Follow Us</h4>
+           <ul class="flex text-2xl gap-7 text-[#EFEBE3]">
+             <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+             <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+             <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+             <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+           </ul>
+         </div>
+       </div>
+     </section>
+  </footer>
+  <!-- Footer Section End -->
 </body>
 </html>
